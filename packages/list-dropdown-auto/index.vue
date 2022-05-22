@@ -47,7 +47,7 @@
     </div>
 </template>
 <script>
-import listEleOverflowAutoMx from './components/ListEleOverflowAutoMx';
+import listEleOverflowAutoMx from './components/listEleOverflowAutoMx';
 
 export default {
     name: 'ListEleOverflowAuto',
