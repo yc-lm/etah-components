@@ -1,8 +1,6 @@
 import { useElementSize, useResizeObserver } from '@vueuse/core';
 
-let com = {};
 export default {
-    components: { BlockEle: com },
     props: {
         list: {
             type: Array,
@@ -109,11 +107,6 @@ export default {
                 this.exceedNumber = 0;
                 this.hiddenListFlag = false;
             }
-        },
-
-        getScreenWidth() {
-            const { width } = useElementSize(this.el);
-            this.width = width;
         },
 
         handleClick(index, status, flag = false) {
