@@ -1,6 +1,6 @@
-import ListDropdownAuto from './index.vue'
+import ListEleOverflowAuto from './index.vue'
 
-ListDropdownAuto.install = (Vue) => {
-    Vue.component(ListDropdownAuto.name, ListDropdownAuto)
+ListEleOverflowAuto.install = (Vue) => {
+    Vue.component(ListEleOverflowAuto.name, ListEleOverflowAuto)
 }
-export default ListDropdownAuto
+export default ListEleOverflowAuto
