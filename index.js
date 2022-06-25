@@ -1,4 +1,4 @@
-import ListEleOverflowAuto from './packages/list-dropdown-auto'
+import ListEleOverflowAuto from './packages/list-overflow-auto-select'
 export {
     ListEleOverflowAuto
 }
