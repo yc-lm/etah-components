@@ -9,11 +9,11 @@
 
         .visible-list-wrap {
             display: flex;
+            position: relative;
         }
 
         .no-visible-list-wrap {
             margin-left: 20px;
-            position: relative;
 
             .more-text {
                 margin-right: 0 !important;

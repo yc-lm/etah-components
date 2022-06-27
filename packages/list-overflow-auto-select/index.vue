@@ -209,6 +209,8 @@ export default {
                 // 宽度大于最小宽度时重置
                 this.overChildNum = 0;
                 this.isHiddenList = false;
+                // 重置下拉属性
+                this.isSelectExpand = false;
             }
         },
 
