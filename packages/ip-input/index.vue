@@ -109,16 +109,12 @@ export default {
                     }
                 })
             }
-<<<<<<< HEAD
         },
       'ipAddress':{
         handler:function(){
           this.initIp(this.ipAddress);
         }
       }
-=======
-        }
->>>>>>> 04657cfe69153964f1f4e73bf03dbc0e01298992
     },
     created() {
         //处理ip回显
