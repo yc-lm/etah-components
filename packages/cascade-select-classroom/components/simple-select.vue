@@ -46,6 +46,8 @@ export default {
 
 <style scoped lang="scss">
 .simple-select {
-    min-width: 200px;
+    display: inline-block;
+    width: 100%;
+    min-width: 240px;
 }
 </style>

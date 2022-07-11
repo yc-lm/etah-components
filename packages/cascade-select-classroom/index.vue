@@ -8,6 +8,7 @@
             :select-value.sync="distId"
             :api="distApi"
             :params="distParams"
+            :width="width"
         />
         <!--学校-->
         <SelectLevelData
@@ -17,6 +18,7 @@
             :select-value.sync="schoolId"
             :api="schoolApi"
             :params="schoolParams"
+            :width="width"
         />
         <!--校区-->
         <SelectLevelData
@@ -26,6 +28,7 @@
             :select-value.sync="areaId"
             :api="areaApi"
             :params="areaParams"
+            :width="width"
         />
         <!--楼栋-->
         <SelectLevelData
@@ -35,6 +38,7 @@
             :select-value.sync="buildId"
             :api="buildApi"
             :params="buildParams"
+            :width="width"
         />
         <!--教室-->
         <SelectLevelData
@@ -44,6 +48,7 @@
             :select-value.sync="roomId"
             :api="roomApi"
             :params="roomParams"
+            :width="width"
         />
     </div>
 </template>
@@ -59,6 +64,10 @@ import {
 } from "./api";
 import { DEFAULT_SELECT_ID } from "./constants";
 
+/**
+ * 级联筛选教室
+ *  * @displayName CascadeSelectClassroom（级联筛选教室）
+ */
 export default {
     name: "CascadeSelectClassroom",
     components: { SelectLevelData },
@@ -89,6 +98,13 @@ export default {
                 buildId: "-1",
                 roomId: "-1",
             }),
+        },
+        /**
+         * 宽度
+         */
+        width: {
+            type: [Number, String],
+            default: "240px",
         },
     },
     data() {
@@ -196,6 +212,19 @@ export default {
         this.initLevelData();
     },
     methods: {
+        /**
+         * 获取选中的id
+         * @return {{distId: string, areaId: string, schoolId: string, buildId: string, roomId: string}}
+         */
+        getSelectIds() {
+            return {
+                distId: this.distId,
+                schoolId: this.schoolId,
+                areaId: this.areaId,
+                buildId: this.buildId,
+                roomId: this.roomId,
+            };
+        },
         initLevelData() {
             this.getDistListAct();
         },
@@ -221,7 +250,6 @@ export default {
             });
         },
         getRoomListAct() {
-            console.log(this.buildId, 111);
             this.$nextTick(() => {
                 this.$refs.roomRef.getLevelData();
             });

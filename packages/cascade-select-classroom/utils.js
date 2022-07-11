@@ -15,3 +15,19 @@ export function isUndefined(value) {
 export function isNull(value) {
     return Object.prototype.toString.call(value) === "[object Null]";
 }
+
+/**
+ * 处理尺寸
+ * @param dimension    传入的尺寸，如 width、height等
+ * @param defaultValue 默认值
+ */
+export function dealDimension(dimension, defaultValue = "auto") {
+    if (isNull(dimension) || isUndefined(dimension)) return defaultValue;
+
+    const tempStr = String(dimension);
+    if (tempStr.includes("px") || tempStr.includes("%")) {
+        return tempStr;
+    } else {
+        return tempStr + "px";
+    }
+}

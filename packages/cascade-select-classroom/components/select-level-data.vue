@@ -1,16 +1,19 @@
 <template>
-    <SimpleSelect
-        v-model="selectValueComputed"
-        :options="finalOptions"
-        :label="label"
-        :value="value"
-    />
+    <div class="select-level-data" :style="{ width: widthComputed }">
+        <SimpleSelect
+            v-model="selectValueComputed"
+            :options="finalOptions"
+            :label="label"
+            :value="value"
+        />
+    </div>
 </template>
 
 <script>
 import SimpleSelect from "./simple-select";
 import { apiSimpleWrapper } from "./../api";
 import { DEFAULT_SELECT_ID, DEFAULT_SELECT_NAME } from "./../constants";
+import { dealDimension } from "./../utils";
 
 export default {
     name: "SelectLevelData",
@@ -38,6 +41,10 @@ export default {
         params: {
             type: Object,
             default: () => ({}),
+        },
+        width: {
+            type: [Number, String],
+            default: "240px",
         },
     },
     data() {
@@ -67,6 +74,9 @@ export default {
                 this.updateSelectValue(value);
             },
         },
+        widthComputed() {
+            return dealDimension(this.width, "auto");
+        },
     },
     methods: {
         async getLevelData() {
@@ -91,4 +101,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.select-level-data {
+    margin-top: 20px;
+}
+</style>
