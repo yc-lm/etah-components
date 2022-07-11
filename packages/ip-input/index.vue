@@ -109,7 +109,12 @@ export default {
                     }
                 })
             }
+        },
+      'ipAddress':{
+        handler:function(){
+          this.initIp(this.ipAddress);
         }
+      }
     },
     created() {
         //处理ip回显
