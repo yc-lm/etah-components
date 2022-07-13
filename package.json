@@ -11,7 +11,8 @@
         "url": "https://github.com/yc-lm/etah-components.git"
     },
     "dependencies": {
-        "element-resize-detector": "^1.2.4"
+        "element-resize-detector": "^1.2.4",
+        "axios": "^0.27.2"
     },
     "keywords": [],
     "author": "",
