@@ -112,7 +112,9 @@ export default {
         },
       'ipAddress':{
         handler:function(){
-          this.initIp(this.ipAddress);
+          if(this.ipAddress){
+            this.initIp(this.ipAddress);
+          }
         }
       }
     },
@@ -140,7 +142,7 @@ export default {
         checkIp(ip){
             if (parseInt(ip) > 255) {
                 ip = '255'
-            } else if (ip === '0' || ip === '00' || ip === '000') {
+            } else if ( ip === '00' || ip === '000') {
                 ip = '1'
             } else {
                 ip = ip.replace(/\b(0+)/g, '')
