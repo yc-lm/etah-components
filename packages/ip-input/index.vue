@@ -142,8 +142,8 @@ export default {
         checkIp(ip){
             if (parseInt(ip) > 255) {
                 ip = '255'
-            } else if ( ip === '00' || ip === '000') {
-                ip = '1'
+            } else if (ip === '0' || ip === '00' || ip === '000') {
+                ip = '0'
             } else {
                 ip = ip.replace(/\b(0+)/g, '')
             }
