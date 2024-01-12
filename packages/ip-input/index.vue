@@ -82,7 +82,6 @@ export default {
       ip3: '',
       ip4: '',
       active: false,
-      isGetValue: true
     };
   },
   watch: {
@@ -206,43 +205,4 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-.ip-box {
-  width: 202px;
-  border: 1px solid #dcdfe6;
-  border-radius: 5px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: 0.2s;
-  input {
-    width: 22%;
-    border: none;
-    outline: none;
-    text-align: center;
-  }
-}
-.disabled {
-  background-color: #f5f7fa;
-  color: #c0c4cc;
-  cursor: not-allowed;
-}
-.active {
-  border: 1px solid #409eff;
-}
-.ip-dot {
-  margin-top: 7px;
-  display: inline-block;
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background-color: #606266;
-}
-input[disabled],
-input:disabled,
-input.disabled {
-  background-color: #f5f7fa;
-}
-</style>
+<style lang="scss" src="./index.scss" scoped></style>
