@@ -91,6 +91,7 @@ export default {
         if (this.ipAddress) {
           this.initIp(this.ipAddress);
         } else {
+          //清空
           this.clearInputValue();
         }
       }
