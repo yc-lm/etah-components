@@ -146,7 +146,7 @@ export default {
         },
         // 容器最小宽度
         containerMinWidth() {
-            return this.listMinWidth + this.wrapperMargin;
+            return this.list.length * this.childWidth + this.wrapperMargin;
         }
     },
     created() {

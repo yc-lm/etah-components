@@ -10,6 +10,9 @@
         .visible-list-wrap {
             display: flex;
             position: relative;
+            .visible-item {
+                flex-shrink: 0;
+            }
         }
 
         .no-visible-list-wrap {
